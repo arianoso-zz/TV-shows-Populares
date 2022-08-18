@@ -1,5 +1,5 @@
 :root {
-	--rojo: #0bd3da;
+	--rojo: #8b6cdb;
 	--fondo: #141414;
 }
 
@@ -23,22 +23,32 @@ header {
 	padding: 30px 0;
 }
 
-header .contenedor {
+header .contenedorh, .logos {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-header .logotipo {
+header nav{
+	float: right;
+}
+
+  @keyframes animate {
+	0%, 100% {
+	  text-shadow: 1px -2px 0 #00ffff, -2px 1px 0 #f00;
+	}
+}
+
+.logotipo {
 	font-family: 'Bebas Neue', cursive;
 	font-weight: normal;
-	color: var(--rojo);
-	font-size: 40px;
+	color: black;
+	animation: animate 10.5s linear infinite;
+	font-size: 30px;
 }
 
 header .logoimg{
 	width: 100px;
-	display: none;
 }
 
 header nav a {
@@ -48,8 +58,9 @@ header nav a {
 }
 
 header nav a:hover{
-	color: #8b6cdb;
+	color: #0bd3da;
 }
+
 
 .contenedor {
 	width: 90%;
@@ -65,16 +76,43 @@ header nav a:hover{
 	text-align: center;
 }
 
+.contenedor .pelicula .info{
+	background-color: #141414;
+	border-radius: 7px;
+	border: 1px solid #015d79;
+	padding: 10px 10px 20px 10px;
+	color: white;
+}
+
+.contenedor .pelicula .popularidad{
+	float: left;
+	font-size: 12px !important;
+	padding: 5px;
+	font-weight: 600;
+}
+
+.contenedor .pelicula .idioma{
+	font-size: 12px !important;
+	padding: 5px;
+	font-weight: 600;
+}
+
 .contenedor .pelicula .titulo {
 	font-size: 15px;
 	font-weight: 600;
-	color: white;
+	color: white !important;
+	padding: 5px;
 }
 
 .contenedor .pelicula .poster {
 	width: 95%;
 	margin-bottom: 5px;
 	border-radius: 5px;
+	cursor: pointer;
+}
+
+.id-link{
+	text-decoration: none;
 }
 
 body::-webkit-scrollbar{
@@ -83,8 +121,19 @@ body::-webkit-scrollbar{
   }
   
   body::-webkit-scrollbar-thumb{
-	background:#0bd3da;
+	background:#015d79;
   border-radius: 0px;
+  }
+
+  a{
+	text-decoration: none;
+	color: white;
+  }
+
+  .trailer{
+	color: #00ffff;
+	font-size: 15px;
+	font-weight: 600;
   }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
